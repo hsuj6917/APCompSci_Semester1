@@ -34,7 +34,7 @@ public class Receipt
 		Vons.format("Subtotal", subtotal);
 		Vons.format("Tax", tax);
 		Vons.format("Total", total);
-		System.out.println("\n          Thank you for shopping at Vons");
+		System.out.println("\n     Thank you for shopping at Vons");
 
 	}
 	
