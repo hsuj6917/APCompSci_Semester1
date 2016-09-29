@@ -18,7 +18,7 @@ public class Subwoofer
 		System.out.printf("The volume of your subwoofer in cubic feet is %7.2f.", vol);
 	}
 	
-	public double calcVol(int h, int l, int w)
+	public static double calcVol(int h, int l, int w)
 	{
 		return (h*l*w)/1728;
 	}
