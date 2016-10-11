@@ -26,6 +26,6 @@ public class Average
 	
 	public static void print()
 	{
-		System.out.printf("The average of %5.5f, %5.5f, and %5.5f is %5.5f.", num1, num2, num3, avg);
+		System.out.printf("The average of %5.1f, %5.1f, and %5.1f is %5.5f.", num1, num2, num3, avg);
 	}
 }
