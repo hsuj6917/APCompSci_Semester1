@@ -11,7 +11,7 @@ public class Scope
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter an integer:");
 		var2 = kb.nextInt();
-		System.out.println("Please enter an double:");
+		System.out.println("Please enter a double:");
 		var3 = kb.nextDouble();
 		method1();
 	}
