@@ -9,4 +9,5 @@ public class Lesson_05
 			System.out.println("It is true!");
 		}
 	}
+	
 }

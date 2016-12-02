@@ -37,7 +37,7 @@ public class Receipt
 		format(i2,p2);
 		format(i3,p3);
 		format(i4,p4);
-		System.out.println("\n_________________________________");
+		System.out.println("\n---------------------------------");
 		format("Subtotal",subtotal);
 		format("Discount",discount);
 		format("Tax",tax);

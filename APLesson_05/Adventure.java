@@ -53,7 +53,7 @@ public class Adventure
 			System.out.println("You storm onto the courts. The coach yells at you to get out of the way. Ignore or tackle him?");
 			choice3 = kb.next();
 			if(choice3.equals("ignore"))
-				System.out.println("You continue walking onto the courts. You take a shuttecock to the face.");
+				System.out.println("You continue walking onto the courts. You take a shuttlecock to the face.");
 			else
 				System.out.println("It turns out the coach is also your history teacher. You fail that class.");
 		}

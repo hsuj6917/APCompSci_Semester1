@@ -14,7 +14,7 @@ public class Factorial
 			factorial = factorial * i;
 		}
 		
-		System.out.println(num + "! equals" + factorial);
+		System.out.println(num + "! equals " + factorial);
 	}
 }
 
