@@ -20,13 +20,13 @@ public class GameGun
 		{
 			System.out.println("Action: ");
 			String action = kb.next();
-			if(action == "r")
+			if(action.equals("r"))
 			{
 				reload();
 			}
-			else if(action == "s")
+			else if(action.equals("s"))
 			{
-				shoot();
+				System.out.println(shoot());
 			}
 			System.out.println("\n");
 			printClip();
