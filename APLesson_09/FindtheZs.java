@@ -32,7 +32,7 @@ public class FindtheZs
 		String zs = "";
 		for(String word : words)
 		{
-			if(word.indexOf("z") > 0)
+			if(word.indexOf("z") >= 0)
 			{
 				zs = zs + (word + " ");
 			}

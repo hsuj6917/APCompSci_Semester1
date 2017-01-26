@@ -26,6 +26,7 @@ public class AverageNumbers
 		{
 			avg = avg + number;
 		}
+		avg = avg/10;
 		return avg;
 	}
 }
