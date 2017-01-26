@@ -12,18 +12,19 @@ public class GameHealth
 		String turn = "";
 		int damage = 0;
 		int amount = 0;
-		healthcount = 0;
-		String[] health = new String[HEALTHLOAD.length];
+		healthCount = 0;
+		String[] health = new String[HEALTHLOAD];
 		
-		while(!turn.equals("Q") && healthCount > 0)
+		while(!(turn.equals("Q")) && healthCount > 0)
 		{
 			System.out.println("Your turn! Hit Enter when ready: ");
 			turn = kb.next();
-			damage = (int)(Math,random()*2+1);
+			damage = (int)(Math.random()*2+1);
 			amount = (int)(Math.random()*6+1);
 			System.out.println(takeDamage(damage,amount));
 			printClip();
 		}
+    }
 		
 		public static String takeDamage(int dmg, int amt)
 		{
@@ -53,7 +54,7 @@ public class GameHealth
 			{
 				if(i < healthCount)
 				{
-					health[i] = " @ "
+					health[i] = " @ ";
 				}
 				else
 				{
@@ -63,5 +64,5 @@ public class GameHealth
 			}
 			System.out.println(output);
 		}
-	}
+
 }
