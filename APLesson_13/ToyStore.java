@@ -6,16 +6,17 @@ public class ToyStore
 	
 	public ToyStore()
 	{
-		
+		toylist = new ArrayLisxt<>();
 	}
 	
-	public ToyStore(list)
+	public ToyStore(String list)
 	{
 		loadToys(list);
 	}
 	
 	public void loadToys(String ts)
 	{
+		toylist = new ArrayLisxt<>();
 		ArrayList<String> toys = new ArrayList<>(Arrays.asList(ts.split(", ")));
 		for(int i = 0; i < toys.size(); i++)
 		{
