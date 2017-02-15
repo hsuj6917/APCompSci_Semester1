@@ -2,11 +2,11 @@ import java.util.*;
 
 public class ToyStore
 {
-	ArrayList<toy> toylist = new ArrayLisxt<>();
+	ArrayList<Toy> toyList = new ArrayList<>();
 	
 	public ToyStore()
 	{
-		toylist = new ArrayLisxt<>();
+		toyList = new ArrayList<>();
 	}
 	
 	public ToyStore(String list)
@@ -16,13 +16,13 @@ public class ToyStore
 	
 	public void loadToys(String ts)
 	{
-		toylist = new ArrayLisxt<>();
+		toyList = new ArrayList<>();
 		ArrayList<String> toys = new ArrayList<>(Arrays.asList(ts.split(", ")));
-		for(int i = 0; i < toys.size(); i++)
+		for(int i = 0; i < toys.size(); i += 2)
 		{
 			String name = toys.get(i);
 			String type = toys.get(i + 1);
-			toy comfortobject = getThatToy(name);
+			Toy comfortobject = getThatToy(name);
 			
 			if(comfortobject == null)
 			{
@@ -31,40 +31,36 @@ public class ToyStore
 					toyList.add(new Car(name));
 				}
 				
-				if(type.equals("Action Figure"))
+				if(type.equals("AF"))
 				{
-					tyoList.add(new AFigure(name));
+					toyList.add(new AFigure(name));
 				}
 			}
 			
 			else
 			{
-				count = 1;
+				comfortobject.setCount(comfortobject.getCount() + 1);
 			}
 		}
 	}
 	
-	public String getThatToy(String nm)
+	public Toy getThatToy(String nm)
 	{
-		for(toy comfortobject : toyList)
+		for(Toy comfortobject : toyList)
 		{
 			if(comfortobject.getName().equals(nm))
 			{
 				return comfortobject;
 			}
-			
-			else
-			{
-				return null;
-			}
 		}
+		return null;
 	}
 	
 	public String getMostFrequentToy()
 	{
 		String name = "";
 		int max = Integer.MIN_VALUE;
-		for(toy comfortobject : toyList)
+		for(Toy comfortobject : toyList)
 		{
 			if(max < comfortobject.getCount())
 			{
@@ -72,8 +68,9 @@ public class ToyStore
 				name = comfortobject.getName();
 			}
 			
-			return name;
+			
 		}
+		return name;
 	}
 	
 	public String getMostFrequentType()
@@ -81,7 +78,7 @@ public class ToyStore
 		int cars = 0;
 		int figures = 0;
 		
-		for(toy comfortobject : toyList)
+		for(Toy comfortobject : toyList)
 		{
 			if(comfortobject.getType().equals("Car"))
 			{
@@ -112,6 +109,6 @@ public class ToyStore
 	
 	public String toString()
 	{
-		return toyList;
+		return "" + toyList;
 	}
 }
