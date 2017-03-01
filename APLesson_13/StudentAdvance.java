@@ -1,25 +1,21 @@
 public class StudentAdvance extends Advance
 {
-  public StudentAdvance()
+	  static int daysLeft;
+
+  public StudentAdvance(int daysLeft)
   {
-    super();
+	  super(daysLeft);
+	  this.daysLeft = daysLeft;
+    
   }
   
   public int getPrice()
   {
-    if(daysLeft >= 10)
-    {
-      return 15;
-    }
-    
-    else
-    {
-      return 20;
-    }
+    return super.getPrice()/2;
   }
   
   public String toString()
   {
-    return "Serial #: " + serialNo + "\nPrice: " + price + " (STUDENT ID REQUIRED)";
+    return "Serial #: " + getSerialNo() + "\nPrice: " + getPrice() + " (STUDENT ID REQUIRED)";		
   }
 }

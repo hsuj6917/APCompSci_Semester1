@@ -6,7 +6,6 @@ public abstract class Ticket
 	public Ticket()
 	{
 		serialNo = (int)(Math.random() * 9999999) + 999999;
-		price = 0;
 	}
 	
 	public int getSerialNo()
@@ -18,6 +17,6 @@ public abstract class Ticket
 	
 	public String toString()
 	{
-		return "Serial #: " + serialNo + "\nPrice: " + price;
+		return "Serial #: " + getSerialNo() + "\nPrice: " + getPrice();
 	}
 }

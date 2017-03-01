@@ -10,11 +10,11 @@ public class TicketDriver
 		System.out.println(a);
 		System.out.println();
     
-		Ticket b = new Advance();
+		Ticket b = new Advance(1);
 		System.out.println(b);
 		System.out.println();
     
-		Ticket c = new StudentAdvance();
+		Ticket c = new StudentAdvance(1);
 		System.out.println(c);
 		System.out.println();
 	}

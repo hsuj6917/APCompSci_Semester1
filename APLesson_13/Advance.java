@@ -1,10 +1,10 @@
 public class Advance extends Ticket
 {
-  public static int daysLeft = TicketDriver.keyboard.nextInt();
+  static int daysLeft;
     
-  public Advance()
+  public Advance(int daysLeft)
   {
-    super();
+    this.daysLeft = daysLeft;
   }
   
   public int getPrice()
