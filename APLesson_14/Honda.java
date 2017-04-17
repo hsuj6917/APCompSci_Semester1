@@ -1,4 +1,4 @@
-public class Honda implements Location
+public class Honda extends Car
 {
 	private double x;
 	private double y;
@@ -11,7 +11,7 @@ public class Honda implements Location
 	
 	public int getID()
 	{
-		return (int)(Math.Random()*999999)+1;
+		return (int)(Math.random()*999999)+1;
 	}
 	
 	public void move(double three, double four)
