@@ -30,7 +30,7 @@ public class Magpie2
 		/** To be completed in Exercise_02:
 		 * 	Modify the following code to use the findKeyword
 		 * 	Method (details in "Exercise_02" below. */
-		if (statement.indexOf("no") >= 0)
+		else if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
 		}
@@ -65,20 +65,20 @@ public class Magpie2
 	 * ========================================================= */
 	private int findKeyword(String statement, String goal, int startPos)
 	{
-		/* New String variable phrase = a more searchable version of statement.
-		 	-Use a combination of trim() and toLowerCase() modify statement.
+		// New String variable phrase = a more searchable version of statement.
+		 	//-Use a combination of trim() and toLowerCase() modify statement.
+			String phrase = statement.trim().toLowerCase();
+		  // New int variable psn = the location of goal in phrase after
+		  // startPos
+			int psn = phrase.indexOf(goal,startPos);
+			//-->Refinement: Make sure we find goal by itself, and not part
+			//of another word ("no" vs no in "know"). if you find an occurrence
+			//of goal, make sure before and after aren't letters.
 
-		   New int variable psn = the location of goal in phrase after
-		   startPos
-
-			-->Refinement: Make sure we find goal by itself, and not part
-			of another word ("no" vs no in "know"). if you find an occurrence
-			of goal, make sure before and after aren't letters.
-
-			As long as psn >= 0...
-				Check if psn > 0 - there is no need to check for before at the
-				beginning of the word
-					set before = the slot in phrase before psn */
+			//As long as psn >= 0...
+			//	Check if psn > 0 - there is no need to check for before at the
+			//	beginning of the word
+			//		set before = the slot in phrase before psn */
 
 				//====>code here
 

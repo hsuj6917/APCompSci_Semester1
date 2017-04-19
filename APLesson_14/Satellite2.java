@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Satellite
+public class Satellite2
 {
    public static void main(String[]args)
    {
@@ -47,9 +47,9 @@ public class Satellite
    }
 
 
-   public static double getDistance(double[] car, double[] home)
+   public static double getDistance(double[] Car2, double[] home)
    {
-       return Math.sqrt((Math.pow(car[0] - home[0], 2)+ Math.pow(car[1] - home[1], 2)));
+       return Math.sqrt((Math.pow(Car2[0] - home[0], 2)+ Math.pow(Car2[1] - home[1], 2)));
    }
 
 
