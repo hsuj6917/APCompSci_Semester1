@@ -19,12 +19,12 @@ public class Satellite
    	 	 	
      	for(Location l : locate)
      	{
-			double x = (Math.random()*100)+1;
-			double y = (Math.random()*100)+1;
+			double x = (Math.round((Math.random()*100)*100.00))/100.00;
+			double y = (Math.round((Math.random()*100)*100.00))/100.00;
           
 			System.out.println("After " + l.getID() + " Moved (" +getLocation(l.getLoc())+")");
           
-			l.move(x,y);
+			((Car)l).move(x,y);
           
 			System.out.println("\nNew Location: (" + getLocation(l.getLoc()) + ")\n\n");
 		}
@@ -42,7 +42,7 @@ public class Satellite
 
        for (Location l : locate)
        {
-           System.out.println("\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")");
+		   System.out.printf("\nDistance for " + l.getID() + ": %.2f", getDistance(l.getLoc(), home));
        }
    }
 
@@ -55,6 +55,6 @@ public class Satellite
 
    public static String getLocation(double[] loc)
    {
-       return loc[0] + ", " + loc[1];
+       return String.format("%.2f,%.2f", loc[0], loc[1]);
    }
 }

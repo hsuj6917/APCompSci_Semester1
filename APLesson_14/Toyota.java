@@ -8,7 +8,7 @@ public class Toyota extends Car
 	public Toyota(String lctn)
 	{
 		x = Double.parseDouble(lctn.split(", ")[0]);
-		y = Double.parseDouble(lctn.split)(", ")[1]);
+		y = Double.parseDouble(lctn.split(", ")[1]);
 	}
 	
 	public int getID()
