@@ -12,9 +12,20 @@ public class Satellite2
 
 
        double[] home = {0, 0};
-
-
-       String printout = "\n\n" +
+   	 	 	
+     	for(Location l : locate)
+     	{
+			double x = (Math.round((Math.random()*100)*100.00))/100.00;
+			double y = (Math.round((Math.random()*100)*100.00))/100.00;
+          
+			System.out.println("After " + l.getID() + " Moved (" +getLocation(l.getLoc())+")");
+          
+			l.move(x,y);
+          
+			System.out.println("\nNew Location: (" + getLocation(l.getLoc()) + ")\n\n");
+		}
+		
+		String printout = "\n\n" +
                "==========================" + "\nStarting locations...";
 			   
 			    for (Location l : locate)
@@ -31,18 +42,6 @@ public class Satellite2
 		   System.out.printf("\nDistance for " + l.getID() + ": %.2f", getDistance(l.getLoc(), home));
        }
 	   
-   	 	 	
-     	for(Location l : locate)
-     	{
-			double x = (Math.round((Math.random()*100)*100.00))/100.00;
-			double y = (Math.round((Math.random()*100)*100.00))/100.00;
-          
-			System.out.println("After " + l.getID() + " Moved (" +getLocation(l.getLoc())+")");
-          
-			l.move(x,y);
-          
-			System.out.println("\nNew Location: (" + getLocation(l.getLoc()) + ")\n\n");
-		}
    }
 
 

@@ -17,7 +17,8 @@ public class Satellite
        String printout = "\n\n" +
                "==========================" + "\nStarting locations...";
    	 	 	
-     	for(Location l : locate)
+     	
+		for(Location l : locate)
      	{
 			double x = (Math.round((Math.random()*100)*100.00))/100.00;
 			double y = (Math.round((Math.random()*100)*100.00))/100.00;
