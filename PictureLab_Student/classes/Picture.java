@@ -362,7 +362,14 @@ public void mirrorHorizontal()
  public void myCollage()
   {
       Picture p1 = new Picture("arch.jpg");
+	  Picture p2 = new Picture("msg.jpg");
+	  Picture p3 = new Picture("barbaras.jpg");
       this.copytwo(p1,15,10, 0, 88);
+	  p1.keepOnlyRed();
+	  this.copytwo(p2,0,0,100,50)
+	  p2.keepOnlyBlue();
+	  this.copytwo(p3,15,0,106,0);
+	  p3.mirrorVertical();
       this.write("mycollage.jpg");
   }
   
